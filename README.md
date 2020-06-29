@@ -1,9 +1,11 @@
 # ems
-it's an Email Managment System. from where you can register and use thair Api's to send emails through your own pannel. Completely in Core php and Sql based with 100% Oop based Code.
-
+it's an Email Managment System. from where you can register and use thair Api's to send emails through your own pannel. Completely in Core php and Sql based with 100% Oop based Code. 
+> note
+ ```
+ make sure you have `Email Catcher in serve mode`.
+```
 ---
-title: Email Service EndPoint
-
+# Email Service EndPoint
 
 toc_footers:
   - <a href='http://localhost:8888/web/view.php?route=login'>Sign Up for a Secret Key</a>
