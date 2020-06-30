@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "eacd70b2-8a7e-4f75-bb15-1cdd1434f01e",
+		"name": "Emial Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8888/mvc/Api/pfemail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "api_key",
+						"value": "e31022a3bfe623ae",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "1b7d9c3e6fa9ac5a2748b5a7e40330ur",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "secret_key",
+						"value": "ur123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request_reference\": \"9222123123141\",\n    \"webhook_url\": \"https://test.com/\",\n    \"data\": {\n        \"from\": \"umer.rasheed@pf.com.pk\",\n        \"to\": \"umer.rasheed@pf.com.pk\",\n        \"cc\": \"umer.cc@pf.com.pk\",\n        \"bcc\": \"umer.bcc@pf.com.pk\",\n        \"subject\": \"This is My Test api.\",\n        \"body\": \"This is My test api to implement in Json.\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/web/apis.php?route=SendEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"web",
+						"apis.php"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "asd",
+							"disabled": true
+						},
+						{
+							"key": "route",
+							"value": "SendEmail"
+						}
+					]
+				},
+				"description": "email servie"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/web/apis.php?route=Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "secret_key",
+						"value": "ur123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"2019-12-13\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/web/apis.php?route=Report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"web",
+						"apis.php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "Report"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/web/apis.php?route=EmailStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "secret_key",
+						"value": "ur123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"request_reference\": \"999765432345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/web/apis.php?route=EmailStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"web",
+						"apis.php"
+					],
+					"query": [
+						{
+							"key": "route",
+							"value": "EmailStatus"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
